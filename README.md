@@ -37,4 +37,12 @@ A p-value of 0.00273 was found, which is lower than our chosen alpha level of 0.
 
 ---
 
-To quantify the likely size of the effect of gender bias in average ratings, I used cohen's d along with boostrapping at a 95% confidence level.
+![Bootstrap Distribution for Cohen d 95% Confidence Interval](images/bootstrapped_cohend_ratings_rmp.png)
+
+To quantify the likely size of the effect of gender bias in average ratings, I computed Cohen's d as an effect size measure and used bootstrapping to get a 95% confidence interval. The resulting interval for Cohen's d ranges from 0.035 to 0.145, which indicates a small difference in professors' average ratings.
+
+---
+
+![Correlation Matrix of RateMyProfessor Tags with Average Rating](images/correlation_matrix_rating_tags_rmp.png)
+
+To predict average rating for a professor, I built a ridge regression model using all of the given tags on Rate My Professor as features. This utilizes L2 regularization to mitigate multicollinearity concerns among the tags. An R^2 of 0.754 and RMSE of 0.397 was obtained by the model. Tags that were most strongly predictive of average rating include *tough_grader*, *good_feedback*, and *amazing_lectures*. These tags being most predictive make sense, as students that perceive a professor to be a harsh grader or give poor feedback would lead to a lower rating being given.
