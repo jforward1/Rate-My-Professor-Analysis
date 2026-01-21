@@ -1,14 +1,14 @@
 # Rate-My-Professor-Analysis
 
 ## Overview
-This project answers various questions about instructors using Rate My Professors data. EDA and feature engineering is completed on the dataset before begin used to answer 10 questions. Linear and logistic regression models are implemented along with bootstrapping methods to understand effect sizes.
+This project answers various questions about instructors using Rate My Professors data. EDA and feature engineering are completed on the dataset before being used to answer 10 questions. Linear and logistic regression models are implemented along with bootstrapping methods to understand effect sizes.
 
 ---
 
 # Research Questions
 Through this project I am to answer the following:
 - Is there bias towards male professors?
-- What are the size of gender effects in the data?
+- What is the size of gender effects in the data?
 - Is there a difference in difficulty ratings by gender?
 - Can we design effective regression models to predict professor ratings?
 
@@ -28,7 +28,7 @@ To begin, I remove professors that have an extremely small number of ratings, as
 
 ---
 
-# Question highlights
+# Question Highlights
 
 ![Average Ratings distributions by gender](images/average_ratings_q1_rmp.png)
 
@@ -43,6 +43,6 @@ To quantify the likely size of the effect of gender bias in average ratings, I c
 
 ---
 
-![Correlation Matrix of RateMyProfessor Tags with Average Rating](images/correlation_matrix_rating_tags_rmp.png)
+![Correlation Matrix of Rate My Professor Tags with Average Rating](images/correlation_matrix_rating_tags_rmp.png)
 
-To predict average rating for a professor, I built a ridge regression model using all of the given tags on Rate My Professor as features. This utilizes L2 regularization to mitigate multicollinearity concerns among the tags. An R^2 of 0.754 and RMSE of 0.397 was obtained by the model. Tags that were most strongly predictive of average rating include *tough_grader*, *good_feedback*, and *amazing_lectures*. These tags being most predictive make sense, as students that perceive a professor to be a harsh grader or give poor feedback would lead to a lower rating being given.
+To predict average rating for a professor, I built a ridge regression model using all of the given tags on Rate My Professor as features. This utilizes L2 regularization to mitigate multicollinearity concerns among the tags. An R^2 of 0.754 and RMSE of 0.397 was obtained by the model. Tags that were most strongly predictive of average rating include *tough_grader*, *good_feedback*, and *amazing_lectures*. These tags being most predictive make sense, as students who perceive a professor to be a harsh grader or give poor feedback would lead to a lower rating being given.
